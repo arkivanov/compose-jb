@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		1F00F3B42575B18200CFAF97 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00F3B32575B18200CFAF97 /* RootView.swift */; };
 		1F00F3B62575B41900CFAF97 /* SimpleRouterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00F3B52575B41900CFAF97 /* SimpleRouterState.swift */; };
 		1F00F3B82575B4F800CFAF97 /* ComponentHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00F3B72575B4F800CFAF97 /* ComponentHolder.swift */; };
+		DC7664FD25A32A28008D8077 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC7664FC25A32A28008D8077 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7664FD25A32A28008D8077 /* RxSwift in Frameworks */,
 				1F00F3A425759FEC00CFAF97 /* Todo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +143,9 @@
 			dependencies = (
 			);
 			name = TodoApp;
+			packageProductDependencies = (
+				DC7664FC25A32A28008D8077 /* RxSwift */,
+			);
 			productName = ios;
 			productReference = 1F00F389257599D800CFAF97 /* TodoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +173,9 @@
 				Base,
 			);
 			mainGroup = 1F00F380257599D800CFAF97;
+			packageReferences = (
+				DC7664FB25A32A28008D8077 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 1F00F38A257599D800CFAF97 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -413,6 +421,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC7664FB25A32A28008D8077 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC7664FC25A32A28008D8077 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC7664FB25A32A28008D8077 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F00F381257599D800CFAF97 /* Project object */;
 }

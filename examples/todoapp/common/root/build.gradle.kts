@@ -20,11 +20,13 @@ kotlin {
                     "iosX64" -> {
                         export(Deps.ArkIvanov.Decompose.decomposeIosX64)
                         export(Deps.ArkIvanov.MVIKotlin.mvikotlinMainIosX64)
+                        export("com.badoo.reaktive:reaktive-iossim:1.1.19")
                     }
 
                     "iosArm64" -> {
                         export(Deps.ArkIvanov.Decompose.decomposeIosArm64)
                         export(Deps.ArkIvanov.MVIKotlin.mvikotlinMainIosArm64)
+                        export("com.badoo.reaktive:reaktive-ios64:1.1.19")
                     }
 
                     else -> error("Unsupported target: $target")
@@ -42,7 +44,7 @@ kotlin {
                 implementation(project(":common:edit"))
                 implementation(Deps.ArkIvanov.MVIKotlin.mvikotlin)
                 implementation(Deps.ArkIvanov.Decompose.decompose)
-                implementation(Deps.Badoo.Reaktive.reaktive)
+                api(Deps.Badoo.Reaktive.reaktive)
             }
         }
     }
