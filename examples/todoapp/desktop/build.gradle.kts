@@ -36,8 +36,8 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "ComoseDesktopTodo"
             modules("java.sql")
+            packageName = "ComoseDesktopTodo"
 
             windows {
                 menuGroup = "Compose Examples"
